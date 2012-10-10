@@ -13,10 +13,11 @@
 }
 
 function detectWeb(doc, url) {
-	//TODO: Handle seach restults and galleries
+	// TODO: Handle seach results and galleries
 	if (url.indexOf("Category:") != -1) {
 		return "multiple";    
 	} else if (url.indexOf("File:") != -1) {
+		// TODO : be more precise to detect videos / PDF ...
 		return "artwork"
 	}
 }
@@ -29,6 +30,7 @@ function doWeb(doc, url) {
 
 	if (itemType == "artwork") {
 		var license = ZU.xpathText(doc, "//span[@class='licensetpl_short']");
+		// TODO : how do we manage i18n when multiple descriptions ?
 		var description = ZU.xpathText(doc, "//span[@class='fileinfotpl_desc']");
 		var title = ZU.xpathText(doc, "//h1/span").substring(5)
 		var author = ZU.xpathText(doc, "//td[@id='fileinfotpl_aut']/following-sibling::*");
