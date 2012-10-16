@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "g",
-	"lastUpdated": "2012-10-10 11:58:15"
+	"lastUpdated":  "2012-10-16 19:15:00"
 }
 
 function detectWeb(doc, url) {
@@ -47,6 +47,12 @@ function doWeb(doc, url) {
 			title: newItem.title,
 			url: fileUrl
 		}];
+		var tags;
+		if (tags = ZU.xpath(doc, "//div[@class='mw-normal-catlinks']//li")){
+			for (var tag in tags) {
+				newItem.tags.push(tags[tag].textContent);
+			}
+		}
 		newItem.url = doc.location.href;
 		newItem.complete();
 	} else if (itemType == "multiple") {
