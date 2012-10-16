@@ -53,6 +53,13 @@ function doWeb(doc, url) {
 				newItem.tags.push(tags[tag].textContent);
 			}
 		}
+		var attr;
+		if (attr = ZU.xpathText(doc, "//td[@class='fileinfotpl_credit']/following-sibling::*")){
+		} else if (attr = ZU.xpathText(doc, "//span[@class='licensetpl_attr']")){
+		} 		
+		if(attr){
+			newItem.notes.push({attribution: attr});
+		}
 		newItem.url = doc.location.href;
 		newItem.complete();
 	} else if (itemType == "multiple") {
