@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "g",
-	"lastUpdated": "2012-10-16 21:20:18"
+	"lastUpdated": "2012-11-07 18:08:33"
 }
 
 function detectWeb(doc, url) {
@@ -87,4 +87,119 @@ function doWeb(doc, url) {
 			});
 		}
 	}
-}
+}/** BEGIN TEST CASES **/
+var testCases = [
+	{
+		"type": "web",
+		"url": "http://commons.wikimedia.org/wiki/Category:Ch%C3%A2teau_de_Losse",
+		"items": "multiple"
+	},
+	{
+		"type": "web",
+		"url": "http://commons.wikimedia.org/wiki/File:0-Chateau-Losse-03.jpg",
+		"items": [
+			{
+				"itemType": "artwork",
+				"creators": [
+					{
+						"firstName": "",
+						"lastName": "Konvalink",
+						"creatorType": "author"
+					}
+				],
+				"notes": [],
+				"tags": [
+					"Château de Losse"
+				],
+				"seeAlso": [],
+				"attachments": [
+					{
+						"title": "0-Chateau-Losse-03.jpg"
+					}
+				],
+				"title": "0-Chateau-Losse-03.jpg",
+				"date": "2012-09-22",
+				"rights": "CC-BY-SA-3.0",
+				"url": "http://commons.wikimedia.org/wiki/File:0-Chateau-Losse-03.jpg",
+				"libraryCatalog": "Wikimedia Commons"
+			}
+		]
+	},
+	{
+		"type": "web",
+		"url": "http://commons.wikimedia.org/wiki/File:542_-_Pont_transbordeur_-_Rochefort.jpg",
+		"items": [
+			{
+				"itemType": "artwork",
+				"creators": [
+					{
+						"firstName": "Patrick",
+						"lastName": "Despoix",
+						"creatorType": "author"
+					}
+				],
+				"notes": [],
+				"tags": [
+					"Pont transbordeur de Rochefort"
+				],
+				"seeAlso": [],
+				"attachments": [
+					{
+						"title": "542 - Pont transbordeur - Rochefort.jpg",
+						"url": "http://upload.wikimedia.org/wikipedia/commons/6/62/542_-_Pont_transbordeur_-_Rochefort.jpg"
+					}
+				],
+				"title": "542 - Pont transbordeur - Rochefort.jpg",
+				"date": "2009-10-11",
+				"rights": "CC-BY-SA-3.0",
+				"url": "http://commons.wikimedia.org/wiki/File:542_-_Pont_transbordeur_-_Rochefort.jpg",
+				"libraryCatalog": "Wikimedia Commons"
+			}
+		]
+	},
+	{
+		"type": "web",
+		"url": "https://commons.wikimedia.org/wiki/File:Woodland_avenue_at_Cefn_Bach_-_geograph.org.uk_-_816439.jpg",
+		"items": [
+			{
+				"itemType": "artwork",
+				"creators": [
+					{
+						"firstName": "Graham",
+						"lastName": "Horn",
+						"creatorType": "author"
+					}
+				],
+				"notes": [
+					{
+						"attribution": "Graham Horn"
+					}
+				],
+				"tags": [],
+				"seeAlso": [],
+				"attachments": [
+					{
+						"title": "Woodland avenue at Cefn Bach - geograph.org.uk - 816439.jpg",
+						"url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Woodland_avenue_at_Cefn_Bach_-_geograph.org.uk_-_816439.jpg"
+					}
+				],
+				"title": "Woodland avenue at Cefn Bach - geograph.org.uk - 816439.jpg",
+				"date": "2008-05-24",
+				"rights": "CC-BY-SA-2.0",
+				"url": "https://commons.wikimedia.org/wiki/File:Woodland_avenue_at_Cefn_Bach_-_geograph.org.uk_-_816439.jpg",
+				"libraryCatalog": "Wikimedia Commons",
+				"accessDate": "CURRENT_TIMESTAMP"
+			}
+		]
+	},
+	{
+		"type": "web",
+		"url": "http://commons.wikimedia.org/wiki/File:Maintenon_-_Chateau_03.jpg",
+		"items": [
+			{
+				
+			}
+		]
+	}
+]
+/** END TEST CASES **/
